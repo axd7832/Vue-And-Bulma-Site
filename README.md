@@ -1,6 +1,6 @@
 # mysite
 
-> Andrews vue site
+> Vue and Bulma testing. I intend to work on this site as a way to learn these two new frameworks.
 
 ## Build Setup
 
