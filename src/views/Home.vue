@@ -50,23 +50,13 @@
       </span>
     </h3>
     <div class="columns">
-      <div class="column is-4" v-for="article in articles">
+      <!-- Grabs first 3 articles  -->
+      <div class="column is-4" v-for="article in articles.slice(0,3)">
         <div class="card">
-          <div class="card-image">
-            <figure class="image is-4by3">
-              <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-            </figure>
-          </div>
           <div class="card-content">
             <div class="media">
-              <div class="media-left">
-                <figure class="image is-48x48">
-                  <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
-                </figure>
-              </div>
               <div class="media-content">
-                <p class="title is-4">John Smith</p>
-                <p class="subtitle is-6">@johnsmith</p>
+                <p class="title is-4">{{article.title}}</p>
               </div>
             </div>
 
@@ -74,7 +64,10 @@
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris. <a>@bulmaio</a>.
               <a href="#">#css</a> <a href="#">#responsive</a>
               <br>
-              <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+              <p>
+                Posted: {{article.datePosted}}
+              </p>
+              <!-- <time datetime="{{ article.datePosted }}"> {{ article.datePosted }}</time> -->
             </div>
           </div>
         </div>
@@ -95,15 +88,23 @@ export default {
     return {
       articles: [{
           id: 1,
-          title: 'Column 1'
+          title: 'Column 1',
+          datePosted: '11/21/2017'
         },
         {
           id: 2,
-          title: 'Column 2'
+          title: 'Column 2',
+          datePosted: '11/21/2017'
         },
         {
           id: 3,
-          title: 'Column 3'
+          title: 'Column 3',
+          datePosted: '11/21/2017'
+        },
+        {
+          id: 4,
+          title: 'Column 4',
+          datePosted: '11/21/2017'
         }
       ]
     }
